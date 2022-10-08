@@ -18,9 +18,9 @@ steps:
       - |
         buildNumber=$(cat _BUILDNUMBER)
         echo "Build Number is ${buildNumber}"
-        echo "Build Number is ${PROJECT_ID}"
+        echo "Project Name is ${PROJECT_ID}"
         echo "dir is ${dir}" 
-        demodataflow/dataflowtest/submit.sh DataflowPipeline \
+        ./submit.sh DataflowPipeline \
           --project=$PROJECT_ID \
           --stagingLocation=gs://dataflowbucket_2022_demo/stage/ \
           --gcpTempLocation=gs://dataflowbucket_2022_demo/temp/ \
